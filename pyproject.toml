@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "Nuwe: Python & django skeleton"
+name = "Python django skeleton"
 version = "1.0.0"
 description = ""
 authors = ["nuwe-team <hello@nuwe.io>"]
