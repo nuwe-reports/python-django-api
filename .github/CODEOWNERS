@@ -1,0 +1,3 @@
+sonar-project.properties                  @team-nuwe
+/.github/**                               @team-nuwe
+/tests/application/test_ping_service.py   @team-nuwe
