@@ -27,7 +27,7 @@ jobs:
           script: |
             try {
               const fs = require('fs')
-              const jsonString = fs.readFileSync('./output.json')
+              const jsonString = fs.readFileSync('./coverage.json')
               const output = JSON.parse(jsonString)
               const assertionResults = []
               output.tests.forEach((objective, i) => {
