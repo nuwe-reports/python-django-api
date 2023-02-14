@@ -20,6 +20,6 @@ test: build migrate
 	docker compose run --rm api python manage.py test
 
 coverage: build migrate
-	docker compose run --rm api coverage run --source='api' --omit='api/tests/*' manage.py test
+	docker-compose run --rm api /bin/ash -c "coverage run --source='api' --omit='api/tests/*' -m pytest && pytest --json-report --json-report-file=output.json --json-report-indent=4"
 	docker compose run --rm api coverage report
 	docker compose run --rm api coverage xml
