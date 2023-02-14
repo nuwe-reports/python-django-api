@@ -21,4 +21,5 @@ test: build migrate
 
 coverage: build migrate
 	docker compose run --rm api coverage run --source='api' --omit='api/tests/*' manage.py test
-	docker compose run --rm api coverage report --format=json --output-file=output.json
+	docker-compose run --rm api coverage json
+	docker-compose run --rm api bash -c "cat coverage.json > output.json"
