@@ -23,6 +23,8 @@ RUN apk add --update --no-cache                                                 
 RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=${POETRY_HOME} python3 -           && \
     poetry config virtualenvs.create false                                                       && \
     poetry install --no-interaction
+    
+RUN pip install pytest pytest-json-report    
 
 EXPOSE 5050
 
